@@ -11,14 +11,14 @@ namespace ProgrammingGuide
 		public int Number { get; set; }
 
 		// Method.
-		public int Multiply(int num)
+		public void Multiply(int num)
 		{
-			return num * Number;
+			Number = num * Number;
 		}
 
-		public int Add(int num)
+		public void Add()
 		{
-			return num + 100;
+			Number = Number + 100;
 		}
 
 		// Instance Constructor.
@@ -42,11 +42,11 @@ namespace ProgrammingGuide
 			Console.WriteLine($"The original number is {custClass.Number}.");
 
 			// Call the public method.
-			int result = custClass.Multiply(4);
-			Console.WriteLine($"The original result multiplied by 4 is {result}.");
+			custClass.Multiply(4);
+			Console.WriteLine($"The original result multiplied by 4 is {custClass.Number}.");
 
-			result = custClass.Add(result);
-			Console.WriteLine($"The original result multiplied by 4 and increased by 100 is {result}.");
+			custClass.Add();
+			Console.WriteLine($"The original result multiplied by 4 and increased by 100 is {custClass.Number}.");
 		}
 	}
 }
