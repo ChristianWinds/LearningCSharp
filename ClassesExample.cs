@@ -26,6 +26,16 @@ namespace ProgrammingGuide
 		{
 			Number = 0;
 		}
+		
+		public void Subtract()
+		{
+			Number = Number - 100;
+		}
+
+		public void Divide(int num)
+		{
+			Number = num / Number;
+		}
 	}
 
 	// Another class definition that contains Main, the program entry point.
