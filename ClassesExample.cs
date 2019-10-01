@@ -36,6 +36,10 @@ namespace ProgrammingGuide
 		{
 			Number = num / Number;
 		}
+		public int Show()
+		{
+			return Number;
+		}
 	}
 
 	// Another class definition that contains Main, the program entry point.
@@ -57,6 +61,15 @@ namespace ProgrammingGuide
 
 			custClass.Add();
 			Console.WriteLine($"The original result multiplied by 4 and increased by 100 is {custClass.Number}.");
+
+			custClass.Divide(2000);
+			Console.WriteLine($"2,000 divided by the original number multiplied by 4, then increased by 100 is {custClass.Number}.");
+
+			custClass.Subtract();
+			Console.WriteLine($"After the division, the division result reduced by 100 is {custClass.Number}.");
+
+			int finalResult = custClass.Show();
+			Console.WriteLine($"The final result after all operations is {finalResult}.");
 		}
 	}
 }
